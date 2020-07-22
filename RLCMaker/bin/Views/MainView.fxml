@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="863.0" prefWidth="1312.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <top>
+      <AnchorPane prefHeight="19.0" prefWidth="1312.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="1312.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="newButton" mnemonicParsing="false" onAction="#newButtonAction" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Run">
+                  <items>
+                    <MenuItem fx:id="btnRun" mnemonicParsing="false" text="Run" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <HBox prefHeight="20.0" prefWidth="1312.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Label" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="12.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="813.0" prefWidth="234.0" style="-fx-border-width: 20px;" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane prefHeight="813.0" prefWidth="313.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Component">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="btnResistor" layoutX="50.0" layoutY="34.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="140.0">
+                                 <children>
+                                    <ImageView fx:id="resistor" fitHeight="37.0" fitWidth="129.0" layoutX="8.0" layoutY="-4.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="1.0">
+                                       <image>
+                                          <Image url="@../resources/icons/resistor.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="btnCapacitor" layoutX="21.0" layoutY="81.0" prefHeight="41.0" prefWidth="192.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="106.0" layoutX="49.0" layoutY="8.0">
+                                       <image>
+                                          <Image url="@../resources/icons/capacitor.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="btnInductor" layoutX="24.0" layoutY="146.0" prefHeight="41.0" prefWidth="192.0">
+                                 <children>
+                                    <ImageView fitHeight="39.0" fitWidth="108.0" layoutX="45.0" layoutY="-1.0">
+                                       <image>
+                                          <Image url="@../resources/icons/inductor.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="btnKey" layoutX="31.0" layoutY="309.0" prefHeight="41.0" prefWidth="192.0">
+                                 <children>
+                                    <ImageView fitHeight="48.0" fitWidth="104.0" layoutX="44.0" layoutY="-3.0">
+                                       <image>
+                                          <Image url="@../resources/icons/key.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="btnACpower" layoutX="24.0" layoutY="187.0" prefHeight="97.0" prefWidth="205.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="53.0">
+                                       <image>
+                                          <Image url="@../resources/icons/ACpower.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <Pane fx:id="pnlCanvas" prefHeight="865.0" prefWidth="1232.0" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
